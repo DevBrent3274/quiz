@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/reset.css">
+  <link rel="stylesheet" href="./assets/style.css">
+  <title>JavaScript Questions</title>
+</head>
+<body>
+  <!-- Setting where the high score and timer filed will be dynamically changed-->
+  <header>
+    <!-- score area to be targeted-->
+    <section class="highscore">
+    <input type="button" class="showScores" value="View Scores">
+    </section>
+
+    <section class="timer">
+      <p>Time left: <span class="timeleft"></span></p>
+
+    </section>
+
+  </header>
+
+  <main>
+    <!-- Craeting an area where the quiz will be displayed and questions and answers will be sent 
+    dynamically-->
+    <div class="initial-container">
+      <h1>Welcome to this mini Javascript Quiz</h1>
+      <h3>Answer as many of these JavaScript questions as you can. There are 60 seconds on the clock to finish the quiz. For each wrong answer 5 seconds will be deducted from the time. If timer reaches zero, the game ends. </h3>
+      <input type="button" class="startbutton" value="Begin Quiz">
+    </div>
+    
+    <section class="questions-container hidden">
+      <h2 class="askquestion"></h2>
+      <ul>
+        <div class="choices">
+          <button class="answer"></button>
+        </div>
+        <div class="choices">
+          <button class="answer"></button>
+        </div>
+        <div class="choices">
+          <button class="answer"></button>
+        </div>
+        <div class="choices">
+          <button class="answer"></button>
+        </div>
+      </ul>
+    <!-- final score and player initilas to be displayed-->
+    </section>
+    <section id="final-score">
+      <form id="final-form"></form>
+    </section>
+  </main>
+
+  
+ <script src="./assets/script.js"></script> 
+</body>
+</html>

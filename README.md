@@ -34,7 +34,12 @@ The following screen shot demonstrates the application functionality:
 
 ![A user clicks through an interactive coding quiz, then enters initials to save the high score before resetting and starting over.](./assets/quizscreen.png)
 
+## Deployed Link
+
+[Click here for deployed Password Generator](https://devbrent3274.github.io/####/)
+
 ## Sources
+
 All reference materials were sourced from the University of Minnesota boot camp program
 
 © 2023 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
