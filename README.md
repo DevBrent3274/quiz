@@ -36,7 +36,7 @@ The following screen shot demonstrates the application functionality:
 
 ## Deployed Link
 
-[Click here for deployed Password Generator](https://devbrent3274.github.io/####/)
+[Click here for deployed JavaScript Quiz](https://devbrent3274.github.io/quiz/)
 
 ## Sources
 
