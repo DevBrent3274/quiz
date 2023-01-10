@@ -40,11 +40,23 @@ p {
 
 header {
   display:flex;
-  justify-content: space-between;
+  padding-top: 1rem;
+}
+
+.highscore{
+  width: 200px;
+}
+
+.choices{
+
 }
 
 .hidden {
   display: none;
+}
+
+.timer{
+  flex: 1;
 }
 
 /*header {
@@ -59,15 +71,15 @@ main {
   margin: 2rem auto;
 }
 
-.answer, .startbutton {
+.answer, .startbutton, .showScores {
   color: white;
   background-color: #e866ec;
   border-radius: 8px;
   padding: 1.5rem;
-  
-
 }
-
+ .answer:hover, .showScores:hover, .startbutton:hover {
+  background-color: #ac33b0;
+ }
 
 
 

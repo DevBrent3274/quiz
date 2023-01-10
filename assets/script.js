@@ -9,6 +9,7 @@ let questionEl = document.querySelector('.askquestion');
 let timerEl = document.querySelector('.timeleft')
 let finalScoreEl = document.querySelector('#final-score')
 let finalFormEl = document.querySelector('#final-form')
+let currQuestion
 let score = 0;
 let questionIdx = 0;
 let timeLeft = 60;
@@ -52,7 +53,7 @@ const questions = [
 // beginning of functions
 function gameOver() {
   localStorage.setItem('recentScore', score);
-  console.log("GAME OVER");
+  
   clearInterval(timeInterval);
   const finishEl = document.createElement('h2')
   // finsihEl.textContent = 'The quiz is over. Your score is ' + score
@@ -105,25 +106,30 @@ function renderQuestion(event) {
     gameOver();
     return
   } else {
-    var currQuestion = questions[questionIdx]
+    currQuestion = questions[questionIdx]
     var h2Tag = document.querySelector(".askquestion");
     h2Tag.textContent = currQuestion.question;
     for (var i = 0; i < answerButton.length; i++) {
       answerButton[i].textContent = currQuestion.answers[i];
     }
   }
-  if (questionIdx != 0) {
-    if (currQuestion.correct == event.target.textContent) {
-      alert("correct")
-      answerButton.textContent = "Correct";
-      score++;
-    } else {
-      alert("incorret")
-      timeLeft -= 5;
-    }
+}
+
+function checkAnswer(event){
+  console.log(currQuestion.correct + "|" + event.target.textContent) 
+  if (currQuestion.correct == event.target.textContent) {
+    alert("correct")
+    
+    // answerButton.textContent = "Correct";
+    score++;
+  } else {
+    alert("incorret")
+    timeLeft -= 5;
   }
   questionIdx++
+  renderQuestion()
 }
+
 
 function start() {
   hideStartPage.classList.add("hidden");
@@ -132,8 +138,9 @@ function start() {
   renderQuestion()
   //displayAnswer() // should go in renderquestions since we are inserting questions wit answe choice there?
 }
+
 for (var i = 0; i < answerButton.length; i++) {
-  answerButton[i].addEventListener("click", renderQuestion)
+  answerButton[i].addEventListener("click", checkAnswer)
 }
 // event listeners
 startBtn.addEventListener("click", start)
